@@ -36,7 +36,7 @@ public class JsonUtils {
 
         mySandwich.setImage(sandwichDetails.getString(sand_IMAGE));
         mySandwich.setDescription(sandwichDetails.getString(sand_DESCRIPTION));
-        mySandwich.setMainName(jsonObjectName.getString(sand_MAIN_NAME ));
+       mySandwich.setMainName(jsonObjectName.getString(sand_MAIN_NAME ));
         mySandwich.setPlaceOfOrigin(sandwichDetails.getString(sand_ORIGIN ));
 
 
@@ -63,5 +63,3 @@ public class JsonUtils {
 
 
     }}
-
-    //https://developer.android.com/samples/Quiz/Application/src/com.example.android.wearable.quiz/JsonUtils.html

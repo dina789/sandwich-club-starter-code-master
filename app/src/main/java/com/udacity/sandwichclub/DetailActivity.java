@@ -106,3 +106,7 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+
+//https://www.w3resource.com/java-tutorial/string/string_valueof.php
+//https://www.tutorialspoint.com/json/json_java_example.htm
+//https://developer.android.com/samples/Quiz/Application/src/com.example.android.wearable.quiz/JsonUtils.html
