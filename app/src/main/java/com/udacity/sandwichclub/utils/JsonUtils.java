@@ -29,18 +29,20 @@ public class JsonUtils {
 
         JSONObject sandwichDetails = new JSONObject(json);
 
-        JSONObject jsonObjectName = sandwichDetails.getJSONObject(sand_NAME);
+            JSONObject jsonObjectName = sandwichDetails.getJSONObject(sand_NAME);
 
-
+            JSONArray jsonArrayAka = jsonObjectName.getJSONArray(sand_AKA);
 
 
         mySandwich.setImage(sandwichDetails.getString(sand_IMAGE));
         mySandwich.setDescription(sandwichDetails.getString(sand_DESCRIPTION));
-       mySandwich.setMainName(jsonObjectName.getString(sand_MAIN_NAME ));
         mySandwich.setPlaceOfOrigin(sandwichDetails.getString(sand_ORIGIN ));
+        mySandwich.setMainName(jsonObjectName.getString(sand_MAIN_NAME ));
+
+            // Getting JSON Array
 
 
-        JSONArray jsonArrayAka = jsonObjectName.getJSONArray(sand_AKA);
+
         List<String> aka = new ArrayList<>();
         for (int i=0; i<jsonArrayAka.length();i++) {
             aka.add((String) jsonArrayAka.get(i));
@@ -52,8 +54,8 @@ public class JsonUtils {
         for (int i=0; i<jsonArrayIngredients.length();i++) {
             ingredients.add((String) jsonArrayIngredients.get(i));
         }
+        mySandwich.setIngredients(ingredients);
 
-            mySandwich.setIngredients(ingredients);
         } catch (JSONException e) {
             e.printStackTrace();
         }

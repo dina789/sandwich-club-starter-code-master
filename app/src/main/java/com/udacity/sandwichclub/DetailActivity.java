@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView tv_description = (TextView) findViewById(R.id.description_tv);
         TextView tv_ingredients = (TextView) findViewById(R.id.ingredients_tv);
         TextView tv_origin = (TextView) findViewById(R.id.origin_tv);
-
+//if not found; show "not available" else show data
 
         if (sandwich.getDescription().isEmpty()) {
 
@@ -91,8 +91,15 @@ public class DetailActivity extends AppCompatActivity {
             if (sandwich.getAlsoKnownAs().isEmpty()) {
                 tv_aka.setText(" not available !!");
             } else {
-                tv_aka.setText(String.valueOf(sandwich.getAlsoKnownAs()));
 
+              tv_aka.setText(String.valueOf(sandwich.getAlsoKnownAs()));
+
+              //   String type="[ ";
+                //  for (String s : sandwich.getAlsoKnownAs()) {
+                 //  type=type+s+" , ";
+                 //  }
+                // type=type+" ]";
+               //  tv_aka.setText(type);
             }
 
 
@@ -106,7 +113,11 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+// https://github.com/dina789/FinalProject-master-master-master
 
 //https://www.w3resource.com/java-tutorial/string/string_valueof.php
 //https://www.tutorialspoint.com/json/json_java_example.htm
+//https://www.tutorialspoint.com/android/android_json_parser.htm
 //https://developer.android.com/samples/Quiz/Application/src/com.example.android.wearable.quiz/JsonUtils.html
+
+
